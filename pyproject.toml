@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fdsolutions-mcp"
+version = "0.1.0"
+description = "MCP server for FD Solutions (Python API)"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=2,<3",
+    "click",
+    "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/SimWorksSoft/fdsolutions-mcp"
+Repository = "https://github.com/SimWorksSoft/fdsolutions-mcp"
+Issues = "https://github.com/SimWorksSoft/fdsolutions-mcp/issues"
+
+[project.scripts]
+fdsolutions-mcp = "server:main"
+
+[tool.setuptools]
+package-dir = {"" = "server"}
+py-modules = ["server", "fd_instance", "mcp_instance", "system_instructions"]
+
+[tool.setuptools.packages.find]
+where = ["server"]
+include = ["tools*"]

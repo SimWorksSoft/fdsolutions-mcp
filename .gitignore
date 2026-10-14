@@ -1,0 +1,10 @@
+__pycache__/
+.idea/
+.venv/
+venv/
+dist/
+build/
+*.py[cod]
+*.egg-info/
+.eggs/
+config.json
